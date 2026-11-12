@@ -313,6 +313,23 @@
   .sucesso p{margin-top:8px;font-size:14.5px;color:var(--ink-2);line-height:1.5;max-width:340px;margin-left:auto;margin-right:auto}
   .sucesso a{display:inline-block;margin-top:20px;font-size:14px;color:var(--conhaque);border-bottom:1px solid currentColor}
 
+
+  /* Banco de talentos */
+  .talentos{display:flex;flex-direction:column;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px}
+  .t-ico{width:48px;height:48px;border-radius:14px;background:var(--creme);display:grid;place-items:center}
+  .t-ico svg{width:24px;height:24px;fill:none;stroke:var(--marrom);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  .t-txt h3{font-size:19px;font-weight:400}
+  .t-txt p{margin-top:6px;font-size:14.5px;color:var(--ink-2);line-height:1.5}
+  .t-bt{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;border:1px solid var(--marrom);color:var(--marrom);font-size:14.5px;font-weight:500;transition:background .2s,color .2s}
+  .t-bt:hover{background:var(--marrom);color:#FBFAF9}
+  .t-bt svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .so-banco{display:none}
+  @media (min-width:900px){
+    .talentos{flex-direction:row;align-items:center;gap:22px;padding:28px 32px}
+    .t-txt{flex:1}
+    .t-txt h3{font-size:22px}
+    .t-bt{align-self:center;white-space:nowrap}
+  }
   .spin{width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:gira .8s linear infinite;display:none}
   .enviando .spin{display:inline-block}
   @keyframes gira{to{transform:rotate(360deg)}}
@@ -394,22 +411,35 @@
           <p>Jardim Itália, Chapecó/SC</p>
         </div>
       </div>
-      <a class="btn-cand" href="#candidatura">Quero me candidatar<svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+      <a class="btn-cand" href="#candidatura" data-escolher="Estágio em Engenharia Civil">Quero me candidatar<svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
     </article>
   </section>
 
   <section class="fade d3" style="margin-top:32px">
+    <h2 class="sec"><i></i>Banco de talentos</h2>
+    <div class="talentos">
+      <span class="t-ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19.5c.6-3 2.8-4.8 5.5-4.8s4.9 1.8 5.5 4.8"/><circle cx="17" cy="9.5" r="2.4"/><path d="M15.6 14.9c.4-.1.9-.2 1.4-.2 2 0 3.6 1.4 4 3.8"/></svg></span>
+      <div class="t-txt">
+        <h3>Não encontrou a vaga ideal?</h3>
+        <p>Cadastre seu currículo no nosso banco de talentos. Quando surgir uma oportunidade com o seu perfil, a gente entra em contato.</p>
+      </div>
+      <a class="t-bt" href="#candidatura" data-escolher="Banco de talentos">Cadastrar meu currículo<svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <section class="fade d4" style="margin-top:32px">
     <h2 class="sec"><i></i>Candidatura</h2>
     <div class="form" id="candidatura">
       <form id="f" novalidate>
-        <h2>Envie seu currículo</h2>
-        <p class="intro">Preencha seus dados e anexe o currículo. Leva menos de 2 minutos.</p>
+        <h2 id="form-titulo">Envie seu currículo</h2>
+        <p class="intro" id="form-intro">Preencha seus dados e anexe o currículo. Leva menos de 2 minutos.</p>
 
         <div class="grid">
           <div class="campo full">
-            <label for="vaga">Vaga <em>*</em></label>
+            <label for="vaga">Vaga ou cadastro <em>*</em></label>
             <select id="vaga" name="vaga" required>
               <option>Estágio em Engenharia Civil</option>
+              <option>Banco de talentos</option>
             </select>
           </div>
           <div class="campo full">
@@ -424,13 +454,13 @@
             <label for="telefone">WhatsApp <em>*</em></label>
             <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(49) 9 0000-0000" required>
           </div>
-          <div class="campo">
+          <div class="campo so-estagio">
             <label for="curso">Curso <em>*</em></label>
             <select id="curso" name="curso" required>
               <option selected>Engenharia Civil</option>
             </select>
           </div>
-          <div class="campo">
+          <div class="campo so-estagio">
             <label for="periodo">Período atual <em>*</em></label>
             <select id="periodo" name="periodo" required>
               <option value="">Selecione</option>
@@ -441,8 +471,23 @@
               <option>Outro</option>
             </select>
           </div>
+          <div class="campo so-banco">
+            <label for="area">Área de interesse <em>*</em></label>
+            <input id="area" name="area" placeholder="Ex.: Engenharia, Comercial, Marketing">
+          </div>
+          <div class="campo so-banco">
+            <label for="formacao">Formação <em>*</em></label>
+            <select id="formacao" name="formacao">
+              <option value="">Selecione</option>
+              <option>Ensino médio</option>
+              <option>Curso técnico</option>
+              <option>Graduação em andamento</option>
+              <option>Graduação completa</option>
+              <option>Pós-graduação</option>
+            </select>
+          </div>
           <div class="campo">
-            <label for="instituicao">Instituição de ensino <em>*</em></label>
+            <label for="instituicao" id="lb-inst">Instituição de ensino <em>*</em></label>
             <input id="instituicao" name="instituicao" placeholder="Ex.: Unochapecó, UFFS" required>
           </div>
           <div class="campo">
@@ -479,7 +524,7 @@
       <div class="sucesso" id="ok">
         <div class="ok-ico"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
         <h2>Candidatura enviada!</h2>
-        <p>Obrigado pelo interesse em fazer parte da Ávira. Vamos analisar seu currículo e, se o seu perfil combinar com a vaga, entramos em contato.</p>
+        <p>Obrigado pelo interesse em fazer parte da Ávira. Vamos analisar seu currículo e, se o seu perfil combinar com uma oportunidade, entramos em contato.</p>
         <a href="./">Voltar para a página inicial</a>
       </div>
     </div>
@@ -530,6 +575,25 @@
   ["dragleave","drop"].forEach(function(ev){ up.addEventListener(ev,function(e){ e.preventDefault(); up.classList.remove("arrastando"); }); });
   up.addEventListener("drop", function(e){ if (e.dataTransfer.files[0]) escolher(e.dataTransfer.files[0]); });
 
+  var selVaga = document.getElementById("vaga");
+  function modo(){
+    var banco = selVaga.value === "Banco de talentos";
+    document.querySelectorAll(".so-estagio").forEach(function(e){ e.style.display = banco ? "none" : ""; });
+    document.querySelectorAll(".so-banco").forEach(function(e){ e.style.display = banco ? "block" : "none"; });
+    document.getElementById("form-titulo").textContent = banco ? "Cadastre seu currículo" : "Envie seu currículo";
+    document.getElementById("form-intro").textContent = banco
+      ? "Deixe seus dados no nosso banco de talentos. Quando surgir uma oportunidade com o seu perfil, entramos em contato."
+      : "Preencha seus dados e anexe o currículo. Leva menos de 2 minutos.";
+    document.getElementById("lb-inst").innerHTML = banco ? "Instituição de ensino ou última empresa <em>*</em>" : "Instituição de ensino <em>*</em>";
+    document.getElementById("instituicao").placeholder = banco ? "Ex.: UFFS, ou a empresa onde trabalha" : "Ex.: Unochapecó, UFFS";
+  }
+  selVaga.addEventListener("change", modo);
+  document.querySelectorAll("[data-escolher]").forEach(function(a){
+    a.addEventListener("click", function(){ selVaga.value = a.getAttribute("data-escolher"); modo(); });
+  });
+  if (location.hash === "#banco") { selVaga.value = "Banco de talentos"; }
+  modo();
+
   var tel = document.getElementById("telefone");
   tel.addEventListener("input", function(){
     var d = tel.value.replace(/\D/g,"").slice(0,11), r = d;
@@ -550,7 +614,8 @@
   f.addEventListener("submit", function(e){
     e.preventDefault(); erro.textContent = "";
     document.querySelectorAll(".campo.erro").forEach(function(c){ c.classList.remove("erro"); });
-    var obrig = ["nome","email","telefone","curso","periodo","instituicao"], falta = null;
+    var banco = v("vaga") === "Banco de talentos";
+    var obrig = banco ? ["nome","email","telefone","area","formacao","instituicao"] : ["nome","email","telefone","curso","periodo","instituicao"], falta = null;
     obrig.forEach(function(id){ if (!v(id)) { document.getElementById(id).closest(".campo").classList.add("erro"); falta = falta || id; } });
     if (falta){ erro.textContent = "Preencha os campos obrigatórios."; document.getElementById(falta).focus(); return; }
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v("email"))){ document.getElementById("email").closest(".campo").classList.add("erro"); erro.textContent = "Confira o e-mail."; return; }
@@ -560,7 +625,7 @@
     bt.disabled = true; bt.classList.add("enviando"); btT.textContent = "Enviando...";
     lerBase64(arquivo).then(function(b64){
       return fetch(API, { method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify({
-        vaga:v("vaga"), nome:v("nome"), email:v("email"), telefone:v("telefone"), curso:v("curso"), periodo:v("periodo"),
+        vaga:v("vaga"), nome:v("nome"), email:v("email"), telefone:v("telefone"), curso: banco ? v("area") : v("curso"), periodo: banco ? v("formacao") : v("periodo"),
         instituicao:v("instituicao"), cidade:v("cidade"), link:v("link"), mensagem:v("mensagem"), site:v("site"),
         arquivo:{ nome: arquivo.name, tipo: tipoDe(arquivo), dados: b64 }
       })});
