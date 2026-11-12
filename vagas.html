@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vagas abertas · Ávira Inc.</title>
+<meta name="description" content="Trabalhe na Ávira Incorporadora. Estágio 2026 em Engenharia Civil ou Arquitetura, no Jardim Itália, Chapecó/SC.">
+<meta name="theme-color" content="#3C1404">
+<meta property="og:title" content="Vagas abertas · Ávira Inc.">
+<meta property="og:description" content="Estágio 2026 · Engenharia Civil ou Arquitetura · Chapecó/SC.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233C1404'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Helvetica,Arial' font-size='34' fill='%23FBFAF9'%3E%C3%81%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg:#FBFAF9;
+    --card:#FFFFFF;
+    --ink:#3C1404;
+    --ink-2:#6E5348;
+    --ink-3:#9C847A;
+    --line:#ECE5E0;
+    --line-2:#DCCFC8;
+    --soft:#F4EEEA;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:var(--bg)}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-weight:300;-webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  a{color:inherit;text-decoration:none}
+
+  .wrap{max-width:440px;margin:0 auto;padding:36px 18px 0}
+
+  /* Cabeçalho */
+  .logo{display:block;width:148px;height:auto;margin:0 auto}
+  .tag{margin-top:16px;font-size:14px;color:var(--ink-2);letter-spacing:.2px}
+  .tag span{display:block;margin-top:2px;font-size:13px;color:var(--ink-3)}
+
+  /* Títulos de seção */
+  .sec{margin:0 2px 12px;font-size:13px;font-weight:400;color:var(--ink-3);letter-spacing:.3px}
+  section+section{margin-top:32px}
+
+  /* Cards dos empreendimentos */
+  .cards{display:flex;flex-direction:column;gap:14px}
+  .card{
+    display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    transition:border-color .25s,box-shadow .25s,transform .25s;
+  }
+  .card .foto{position:relative;aspect-ratio:12/5;overflow:hidden;background:var(--soft)}
+  .card .foto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+  .card .info{display:flex;align-items:center;gap:12px;padding:16px 18px 18px}
+  .card .txt{flex:1;min-width:0}
+  .card h3{font-size:19px;font-weight:400;letter-spacing:.2px}
+  .card p{margin-top:4px;font-size:13.5px;color:var(--ink-2)}
+  .faixa{
+    position:absolute;left:12px;top:12px;z-index:1;display:inline-flex;align-items:center;gap:6px;
+    padding:7px 12px;border-radius:999px;background:rgba(60,20,4,.92);color:#FBFAF9;
+    font-size:12.5px;font-weight:500;letter-spacing:.1px;box-shadow:0 6px 18px -8px rgba(0,0,0,.5);
+    -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)
+  }
+  .faixa svg{width:14px;height:14px;fill:none;stroke:#F2C9A8;stroke-width:1.8;stroke-linecap:round}
+  .selo{
+    display:inline-block;margin-top:10px;padding:4px 10px;border-radius:999px;
+    background:var(--soft);font-size:12px;color:var(--ink-2)
+  }
+  .ir{
+    flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);
+    display:grid;place-items:center;transition:background .25s,border-color .25s,color .25s
+  }
+  .ir svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+  .card:hover{border-color:var(--line-2);box-shadow:0 10px 30px -18px rgba(60,20,4,.35)}
+  .card:hover .foto img{transform:scale(1.03)}
+  .card:hover .ir{background:var(--ink);border-color:var(--ink);color:#FBFAF9}
+
+  /* Botões */
+  .links{display:flex;flex-direction:column;gap:10px}
+  .btn{
+    display:flex;align-items:center;gap:14px;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 16px;
+    transition:border-color .25s,background .25s;
+  }
+  .btn .ico{
+    flex:none;width:40px;height:40px;border-radius:11px;background:var(--soft);
+    display:grid;place-items:center
+  }
+  .btn .ico svg{width:20px;height:20px;fill:none;stroke:var(--ink);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  .btn .t{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+  .btn b{font-size:15px;font-weight:500;letter-spacing:.1px}
+  .btn small{font-size:13px;color:var(--ink-3);}
+  .btn .seta{width:16px;height:16px;flex:none;fill:none;stroke:var(--ink-3);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s}
+  .btn:hover{border-color:var(--line-2);background:#FFFDFC}
+  .btn:hover .seta{transform:translateX(3px)}
+
+  .btn.principal{background:var(--ink);border-color:var(--ink);color:#FBFAF9}
+  .btn.principal .ico{background:rgba(255,255,255,.1)}
+  .btn.principal .ico svg{stroke:#FBFAF9}
+  .btn.principal small{color:#D6C4BC}
+  .btn.principal .seta{stroke:#D6C4BC}
+  .btn.principal:hover{background:#4E1C08}
+
+  /* Rodapé */
+  footer{margin-top:44px;text-align:center;font-size:12.5px;line-height:1.8;color:var(--ink-3)}
+  footer .linha{display:block;width:28px;height:1px;background:var(--line-2);margin:0 auto 16px}
+
+
+  /* Paleta Ávira */
+  :root{--marrom:#3C1404;--conhaque:#955B1F;--areia:#DAC6C6;--creme:#F5EFEB}
+
+  /* Faixa do topo */
+  .faixa-topo{
+    background:var(--marrom);color:#FBFAF9;text-align:center;
+    padding:56px 20px 60px;position:relative;overflow:hidden
+  }
+  .faixa-topo::before{
+    content:"";position:absolute;inset:auto -20% -60% -20%;height:120%;
+    background:radial-gradient(closest-side,rgba(149,91,31,.35),transparent 70%);pointer-events:none
+  }
+  .faixa-topo .logo{color:#FBFAF9;width:150px;position:relative}
+  .faixa-topo .tag{color:var(--areia);position:relative;margin-top:18px}
+  .faixa-topo .tag span{color:#B89A8C}
+
+  /* Listras com as cores da marca */
+  .listras{display:flex;height:5px}
+  .listras span{flex:1}
+  .listras span:nth-child(1){background:var(--conhaque);flex:2}
+  .listras span:nth-child(2){background:var(--areia)}
+  .listras span:nth-child(3){background:var(--creme)}
+
+  /* Títulos de seção com traço conhaque */
+  .sec{display:flex;align-items:center;gap:10px;color:var(--ink-2)}
+  .sec i{display:block;width:18px;height:1px;background:var(--conhaque)}
+
+  /* Selos e detalhes */
+  .selo{background:var(--creme);color:var(--marrom);border:1px solid #E9DCD4}
+  .btn .ico{background:var(--creme)}
+  .btn.principal .ico{background:rgba(255,255,255,.1)}
+
+  /* Faixa do rodapé */
+  .faixa-base{margin-top:44px;background:var(--marrom);color:var(--areia);text-align:center}
+  .faixa-base .base-in{padding:30px 20px 36px;font-size:12.5px;line-height:1.8}
+  .faixa-base .logo-mini{display:block;width:84px;margin:0 auto 12px;color:#FBFAF9}
+  .faixa-base .fino{color:#B89A8C}
+  .faixa-base .assina{font-size:16px;color:#FBFAF9;letter-spacing:.3px;margin-bottom:6px}
+  .faixa-topo .tag{max-width:300px;margin-left:auto;margin-right:auto;font-size:15px;line-height:1.5}
+  .faixa-topo .tag span{margin-top:8px;font-size:12.5px}
+
+
+  /* Computador */
+  @media (min-width:900px){
+    .faixa-topo{padding:88px 32px 92px}
+    .faixa-topo .logo{width:230px}
+    .faixa-topo .tag{max-width:none;font-size:19px;margin-top:24px}
+    .faixa-topo .tag span{font-size:14px;margin-top:10px}
+    .listras{height:6px}
+    .wrap{max-width:1120px;padding:64px 40px 0}
+    .sec{font-size:15px;margin-bottom:18px}
+    .sec i{width:28px}
+    section+section{margin-top:56px}
+    .cards{display:flex;flex-direction:column;gap:24px}
+    .card{border-radius:20px}
+    .card{display:grid;grid-template-columns:58% 1fr;grid-template-rows:1fr auto auto 1fr;min-height:360px}
+    .card .foto{grid-column:1;grid-row:1 / 5;aspect-ratio:auto;height:100%}
+    .card .info{grid-column:2;grid-row:2;align-items:flex-start;padding:0 36px 22px}
+    .card .entrega{grid-column:2;grid-row:3;margin:0 36px}
+    .card .info h3{font-size:30px}
+    .card .info{padding:24px 26px 26px}
+    .card h3{font-size:26px}
+    .card p{font-size:15.5px;margin-top:6px}
+    .selo{font-size:13px;padding:5px 12px;margin-top:14px}
+    .ir{width:44px;height:44px}
+    .faixa{left:18px;top:18px;font-size:14px;padding:9px 15px}
+    .links{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .btn{padding:20px 22px;border-radius:16px;gap:18px}
+    .btn .ico{width:48px;height:48px;border-radius:13px}
+    .btn .ico svg{width:22px;height:22px}
+    .btn b{font-size:17px}
+    .btn small{font-size:14px}
+    .faixa-base{margin-top:72px}
+    .faixa-base .base-in{padding:48px 20px 56px;font-size:14px}
+    .faixa-base .logo-mini{width:120px;margin-bottom:16px}
+    .faixa-base .assina{font-size:22px}
+  }
+
+
+
+
+  /* Entrega */
+  .entrega{margin:0 18px 18px;padding-top:14px;border-top:1px solid var(--line)}
+  .entrega .rot{display:block;font-size:12px;color:var(--ink-3);letter-spacing:.3px}
+  .entrega .linha{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;margin-top:3px}
+  .entrega .val{font-size:16px;font-weight:400;color:var(--marrom)}
+  .entrega s{color:var(--ink-3);text-decoration-color:var(--conhaque);text-decoration-thickness:1px;margin-right:4px;font-weight:300}
+  .entrega .old{display:block;margin-top:4px;font-size:13.5px;color:var(--ink-3);text-decoration:line-through;text-decoration-color:var(--conhaque);text-decoration-thickness:1px}
+  .entrega .old+.linha{margin-top:1px}
+  .entrega .nota{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:13.5px;color:var(--conhaque)}
+  .entrega .nota::before{content:"";width:16px;height:1px;background:var(--conhaque);flex:none}
+  @media (min-width:900px){
+    .entrega{margin:0 26px 26px;padding-top:18px}
+    .entrega .rot{font-size:13px}
+    .entrega .val{font-size:19px}
+    .entrega .old{font-size:14.5px}
+    .entrega .nota{font-size:14.5px;margin-top:10px}
+  }
+
+  /* Entrada suave */
+  .fade{opacity:0;transform:translateY(8px);animation:sobe .7s ease forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}
+  @keyframes sobe{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){
+    .fade{animation:none;opacity:1;transform:none}
+    .card,.card .foto img,.btn,.btn .seta,.ir{transition:none}
+  }
+  a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+
+  /* ===== Página de vagas ===== */
+  .voltar{
+    position:absolute;left:16px;top:16px;z-index:2;display:inline-flex;align-items:center;gap:6px;
+    color:var(--areia);font-size:13px;padding:6px 10px;border-radius:999px;transition:background .2s
+  }
+  .voltar:hover{background:rgba(255,255,255,.08)}
+  .voltar svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .faixa-topo.mini{padding:58px 20px 46px}
+  .faixa-topo.mini .logo{width:118px}
+  .faixa-topo h1.titulo{position:relative;margin-top:22px;font-size:26px;font-weight:300;letter-spacing:.2px;color:#FBFAF9}
+  .faixa-topo .sub{position:relative;margin-top:6px;font-size:14px;color:var(--areia)}
+
+  .vaga{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+  .vaga-top{padding:22px 20px 18px;border-bottom:1px solid var(--line)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+  .chip{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--creme);color:var(--marrom);border:1px solid #E9DCD4}
+  .chip.forte{background:var(--marrom);border-color:var(--marrom);color:#FBFAF9}
+  .vaga h2{font-size:22px;font-weight:400;letter-spacing:.2px}
+  .vaga .area{margin-top:4px;font-size:14px;color:var(--ink-2)}
+  .aviso{
+    display:flex;gap:10px;align-items:flex-start;margin-top:16px;padding:12px 14px;border-radius:12px;
+    background:#FBF6F2;border:1px solid #EFE2D8;font-size:13.5px;color:var(--marrom);line-height:1.45
+  }
+  .aviso svg{width:18px;height:18px;flex:none;margin-top:1px;fill:none;stroke:var(--conhaque);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+  .detalhes{display:grid;grid-template-columns:1fr;gap:0}
+  .bloco{padding:18px 20px;border-bottom:1px solid var(--line)}
+  .bloco:last-child{border-bottom:0}
+  .bloco h3{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:400;color:var(--ink-3);letter-spacing:.3px;margin-bottom:10px}
+  .bloco h3 i{display:block;width:14px;height:1px;background:var(--conhaque)}
+  .bloco ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+  .bloco li{position:relative;padding-left:16px;font-size:14.5px;color:var(--marrom);line-height:1.45}
+  .bloco li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--conhaque)}
+  .bloco p{font-size:14.5px;color:var(--marrom);line-height:1.5}
+
+  .btn-cand{
+    display:flex;align-items:center;justify-content:center;gap:10px;margin:0 20px 20px;padding:15px 18px;border-radius:14px;
+    background:var(--marrom);color:#FBFAF9;font-size:15px;font-weight:500;transition:background .2s
+  }
+  .btn-cand:hover{background:#4E1C08}
+  .btn-cand svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+  /* Formulário */
+  .form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px 24px;scroll-margin-top:16px}
+  .form h2{font-size:21px;font-weight:400}
+  .form .intro{margin-top:4px;font-size:14px;color:var(--ink-2)}
+  .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px}
+  .campo label{display:block;font-size:13px;color:var(--ink-2);margin-bottom:6px}
+  .campo label em{font-style:normal;color:var(--conhaque)}
+  .campo input,.campo select,.campo textarea{
+    width:100%;font:inherit;font-size:15px;color:var(--marrom);background:#FFFDFC;
+    border:1px solid var(--line-2);border-radius:11px;padding:12px 13px;outline:none;transition:border-color .2s,box-shadow .2s;
+    -webkit-appearance:none;appearance:none
+  }
+  .campo select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239C847A' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:38px}
+  .campo textarea{min-height:96px;resize:vertical}
+  .campo input:focus,.campo select:focus,.campo textarea:focus{border-color:var(--conhaque);box-shadow:0 0 0 3px rgba(149,91,31,.12)}
+  .campo.erro input,.campo.erro select{border-color:#B4472F}
+  .full{grid-column:1/-1}
+  .isca{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  .upload{
+    position:relative;display:flex;align-items:center;gap:14px;padding:16px;border:1.5px dashed var(--line-2);border-radius:14px;
+    background:#FFFDFC;cursor:pointer;transition:border-color .2s,background .2s
+  }
+  .campo label.upload{display:flex;margin-bottom:0;font-size:inherit;color:inherit}
+  .upload:hover,.upload.arrastando{border-color:var(--conhaque);background:#FBF6F2}
+  .upload input{position:absolute;inset:0;opacity:0;cursor:pointer}
+  .upload .ico{flex:none;width:44px;height:44px;border-radius:12px;background:var(--creme);display:grid;place-items:center}
+  .upload .ico svg{width:20px;height:20px;fill:none;stroke:var(--marrom);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  .upload b{display:block;font-size:14.5px;font-weight:500;color:var(--marrom)}
+  .upload small{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px}
+  .upload.ok{border-style:solid;border-color:var(--conhaque);background:#FBF6F2}
+  .upload.erro{border-color:#B4472F}
+
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink-2);line-height:1.45;cursor:pointer}
+  .consent input{margin-top:2px;width:17px;height:17px;accent-color:#3C1404;flex:none}
+
+  .enviar{
+    width:100%;margin-top:18px;display:flex;align-items:center;justify-content:center;gap:10px;
+    font:inherit;font-size:15.5px;font-weight:500;color:#FBFAF9;background:var(--marrom);border:0;border-radius:14px;padding:16px;cursor:pointer;transition:background .2s,opacity .2s
+  }
+  .enviar:hover{background:#4E1C08}
+  .enviar[disabled]{opacity:.65;cursor:wait}
+  .msg-erro{margin-top:12px;font-size:13.5px;color:#9A3A26;min-height:1em}
+
+  .sucesso{display:none;text-align:center;padding:30px 10px 10px}
+  .sucesso .ok-ico{width:56px;height:56px;border-radius:50%;background:var(--creme);display:grid;place-items:center;margin:0 auto 16px}
+  .sucesso .ok-ico svg{width:26px;height:26px;fill:none;stroke:var(--marrom);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .sucesso h2{font-size:22px;font-weight:400}
+  .sucesso p{margin-top:8px;font-size:14.5px;color:var(--ink-2);line-height:1.5;max-width:340px;margin-left:auto;margin-right:auto}
+  .sucesso a{display:inline-block;margin-top:20px;font-size:14px;color:var(--conhaque);border-bottom:1px solid currentColor}
+
+  .spin{width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:gira .8s linear infinite;display:none}
+  .enviando .spin{display:inline-block}
+  @keyframes gira{to{transform:rotate(360deg)}}
+
+  @media (min-width:700px){
+    .grid{grid-template-columns:1fr 1fr}
+    .detalhes{grid-template-columns:1fr 1fr}
+    .detalhes .bloco:nth-child(odd){border-right:1px solid var(--line)}
+    .detalhes .bloco:nth-last-child(-n+2){border-bottom:0}
+  }
+  @media (min-width:900px){
+    .wrap{max-width:860px}
+    .faixa-topo.mini{padding:72px 32px 60px}
+    .faixa-topo.mini .logo{width:150px}
+    .faixa-topo h1.titulo{font-size:36px;margin-top:28px}
+    .faixa-topo .sub{font-size:16px}
+    .voltar{left:32px;top:28px;font-size:14px}
+    .vaga-top{padding:30px 32px 26px}
+    .vaga h2{font-size:28px}
+    .vaga .area{font-size:16px}
+    .bloco{padding:24px 32px}
+    .bloco li,.bloco p{font-size:15.5px}
+    .btn-cand{display:none}
+    .form{padding:32px}
+    .form h2{font-size:26px}
+  }
+</style>
+</head>
+<body>
+
+<header class="faixa-topo mini">
+  <a class="voltar" href="./"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>Voltar</a>
+  <span class="logo fade d1" role="img" aria-label="Ávira Inc."><svg style="width:100%;height:auto;display:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2034 444" version="1.1"><path d="M 153.799 19.250 C 146.355 29.838, 138.146 41.538, 135.555 45.250 L 130.845 52 150.173 51.961 L 169.500 51.923 187 26.906 C 196.625 13.147, 204.650 1.464, 204.833 0.945 C 205.035 0.373, 197.690 -0, 186.250 -0 L 167.332 -0 153.799 19.250 M 615.703 43.442 C 601.530 48.498, 593.119 62.784, 595.806 77.235 C 601.208 106.282, 640.177 111.699, 653.215 85.215 C 657.396 76.722, 657.683 68.369, 654.074 60.230 C 651.142 53.619, 642.817 45.807, 636.357 43.606 C 630.667 41.667, 620.897 41.590, 615.703 43.442 M 1292.444 44.374 C 1286.136 47.311, 1280.412 53.875, 1278.477 60.388 C 1276.618 66.649, 1276.629 68.387, 1278.567 74.913 C 1283.037 89.967, 1300.769 97.711, 1314.656 90.674 C 1323.761 86.061, 1328.941 77.659, 1328.978 67.446 C 1329.046 48.680, 1309.588 36.391, 1292.444 44.374 M 124.496 80.250 C 117.339 100.505, 0 436.431, 0 436.663 C 0 436.848, 8.930 437, 19.844 437 L 39.688 437 57.594 385.750 L 75.500 334.500 147.135 334.243 L 218.770 333.987 223.420 347.243 C 225.978 354.535, 234.061 377.600, 241.383 398.500 L 254.695 436.500 275.463 436.771 C 291.920 436.985, 296.134 436.778, 295.770 435.771 C 295.518 435.072, 267.455 354.512, 233.409 256.750 L 171.507 79 148.222 79 C 130.496 79, 124.832 79.298, 124.496 80.250 M 146.633 128 C 146.314 128.825, 132.810 167.750, 116.625 214.500 L 87.199 299.500 146.758 299.758 C 179.516 299.900, 206.512 299.821, 206.751 299.583 C 207.068 299.265, 158.866 159.011, 148.469 130 C 147.616 127.619, 147.029 126.979, 146.633 128 M 1503.585 146.107 C 1488.912 148.247, 1470.359 155.512, 1459.500 163.371 C 1452.429 168.488, 1442.477 178.582, 1438.706 184.460 L 1435.500 189.459 1435.228 170.230 L 1434.957 151 1421.978 151 L 1409 151 1409 293 L 1409 435 1422 435 L 1435 435 1435.017 345.250 C 1435.027 293.555, 1435.452 251.541, 1436.018 246.164 C 1440.045 207.938, 1459.565 182.040, 1492.035 171.844 C 1498.568 169.793, 1501.436 169.507, 1515 169.555 C 1529.048 169.604, 1531.249 169.860, 1538.500 172.279 C 1549.859 176.070, 1558.084 181.319, 1566.552 190.182 C 1578.393 202.576, 1585.648 219.478, 1588.034 240.229 C 1588.569 244.881, 1588.988 289.306, 1588.992 341.750 L 1589 435 1602.040 435 L 1615.080 435 1614.719 332.750 C 1614.397 241.718, 1614.174 229.680, 1612.687 223.029 C 1604.247 185.291, 1583.514 160.763, 1551 150.050 C 1537.648 145.651, 1517.944 144.012, 1503.585 146.107 M 1804 145.595 C 1764.196 150.329, 1733.698 165.703, 1709.529 193.218 C 1679.347 227.578, 1667.255 279.646, 1677.977 329.083 C 1690.167 385.289, 1730.887 425.929, 1787.312 438.204 C 1801.014 441.184, 1833.609 441.439, 1847.374 438.672 C 1887.544 430.599, 1918.205 408.531, 1935.168 375.481 C 1939.373 367.290, 1945 353.243, 1945 350.940 C 1945 350.397, 1938.979 350, 1930.745 350 L 1916.490 350 1914.212 355.874 C 1908.511 370.576, 1892.909 388.924, 1877.794 398.702 C 1840.046 423.121, 1787.218 421.209, 1751.340 394.125 C 1727.114 375.837, 1711.663 350.767, 1704.848 318.688 C 1701.794 304.312, 1701.798 281.669, 1704.857 267.266 C 1716.323 213.289, 1755.339 176.470, 1807.013 170.866 C 1826.446 168.758, 1847.713 172.418, 1865.706 180.967 C 1887.187 191.173, 1902.428 206.225, 1912.569 227.250 L 1917.272 237 1931.215 237 L 1945.159 237 1944.464 233.750 C 1944.081 231.963, 1942.272 226.765, 1940.443 222.201 C 1924.513 182.450, 1890.425 155.350, 1846.500 147.516 C 1837.766 145.958, 1811.084 144.752, 1804 145.595 M 984.500 149.555 C 952.552 154.953, 922.971 171.783, 902.867 196 C 882.654 220.348, 871.422 249.515, 869.101 283.684 C 865.039 343.482, 890.703 396.662, 936.880 424.132 C 958.619 437.064, 981.330 442.988, 1009.199 442.996 C 1050.332 443.007, 1084.267 426.957, 1107.106 396.688 L 1113 388.877 1113 412.938 L 1113 437 1131.500 437 L 1150 437 1150 295.500 L 1150 154 1131.500 154 L 1113 154 1113 178.562 L 1113 203.123 1107.075 195.260 C 1092.021 175.282, 1069.160 159.343, 1046 152.677 C 1029.709 147.988, 1002.078 146.585, 984.500 149.555 M 1241 163 L 1241 175 1268 175 L 1295 175 1295 305 L 1295 435 1308 435 L 1321 435 1321 293 L 1321 151 1281 151 L 1241 151 1241 163 M 282.345 154.750 C 282.724 155.365, 385.470 414.356, 392.244 431.772 L 394.295 437.045 411.820 436.772 L 429.345 436.500 485.163 297.500 C 515.863 221.050, 541.259 157.488, 541.599 156.250 L 542.217 154 522.770 154 L 503.323 154 458.044 268.250 C 433.140 331.087, 412.675 382.605, 412.566 382.732 C 412.458 382.860, 392.400 331.448, 367.993 268.482 L 323.618 154 302.750 154 C 291.273 154, 282.090 154.338, 282.345 154.750 M 561 171 L 561 188 585.500 188 L 610 188 610 312.500 L 610 437 629.500 437 L 649 437 649 295.500 L 649 154 605 154 L 561 154 561 171 M 775.654 155.632 C 751.272 160.861, 736.937 173.776, 730.288 196.500 C 728.666 202.044, 728.510 211.410, 728.238 319.750 L 727.945 437 746.944 437 L 765.942 437 766.227 324.250 C 766.494 218.490, 766.623 211.213, 768.310 206.867 C 771.010 199.910, 775.990 194.738, 783.187 191.415 L 789.500 188.500 823.250 188.190 L 857 187.879 857 170.940 L 857 154 819.750 154.082 C 791.019 154.144, 780.934 154.499, 775.654 155.632 M 991.849 184.564 C 941.980 193.589, 908.012 238.537, 908.012 295.500 C 908.012 350.041, 937.762 391.996, 985.825 405.234 C 992.235 407, 996.301 407.350, 1010.500 407.358 C 1026.128 407.366, 1028.210 407.150, 1036.296 404.675 C 1069.510 394.508, 1094.421 369.720, 1105.922 335.393 C 1113.557 312.603, 1114.116 283.464, 1107.366 260.112 C 1104.374 249.763, 1097.817 235.600, 1091.979 226.877 C 1085.638 217.403, 1069.859 202.377, 1060.207 196.620 C 1051.148 191.218, 1035.989 185.649, 1026 184.053 C 1017.172 182.643, 1001.138 182.883, 991.849 184.564 M 2002 389.935 C 1996.694 391.555, 1991.067 395.095, 1988.125 398.665 C 1979.978 408.548, 1980.196 422.028, 1988.662 431.918 C 1998.126 442.974, 2014.377 443.978, 2025.226 434.177 C 2031.393 428.606, 2033.454 423.802, 2033.454 415 C 2033.454 409.207, 2032.955 406.557, 2031.261 403.357 C 2025.833 393.099, 2012.167 386.831, 2002 389.935" stroke="none" fill="currentColor" fill-rule="evenodd"/></svg></span>
+  <h1 class="titulo fade d1">Vagas abertas</h1>
+  <p class="sub fade d1">Venha construir com a gente.</p>
+</header>
+<div class="listras" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<main class="wrap">
+
+  <section class="fade d2">
+    <h2 class="sec"><i></i>1 vaga disponível</h2>
+    <article class="vaga">
+      <div class="vaga-top">
+        <div class="chips">
+          <span class="chip forte">Estágio 2026</span>
+          <span class="chip">Presencial</span>
+          <span class="chip">6 horas por dia</span>
+        </div>
+        <h2>Estágio em Engenharia Civil ou Arquitetura</h2>
+        <p class="area">Jardim Itália · Chapecó, SC</p>
+        <div class="aviso">
+          <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          <span>Contratação a partir de <b style="font-weight:500">janeiro de 2027</b>.</span>
+        </div>
+      </div>
+      <div class="detalhes">
+        <div class="bloco">
+          <h3><i></i>Requisitos</h3>
+          <ul>
+            <li>Cursando Engenharia Civil ou Arquitetura</li>
+            <li>A partir do 7º período</li>
+          </ul>
+        </div>
+        <div class="bloco">
+          <h3><i></i>Bolsa-auxílio e benefícios</h3>
+          <ul>
+            <li>Bolsa-auxílio</li>
+            <li>Vale-transporte</li>
+            <li>Vale-alimentação</li>
+          </ul>
+        </div>
+        <div class="bloco">
+          <h3><i></i>Carga horária</h3>
+          <p>6 horas por dia</p>
+        </div>
+        <div class="bloco">
+          <h3><i></i>Local</h3>
+          <p>Jardim Itália, Chapecó/SC</p>
+        </div>
+      </div>
+      <a class="btn-cand" href="#candidatura">Quero me candidatar<svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    </article>
+  </section>
+
+  <section class="fade d3" style="margin-top:32px">
+    <h2 class="sec"><i></i>Candidatura</h2>
+    <div class="form" id="candidatura">
+      <form id="f" novalidate>
+        <h2>Envie seu currículo</h2>
+        <p class="intro">Preencha seus dados e anexe o currículo. Leva menos de 2 minutos.</p>
+
+        <div class="grid">
+          <div class="campo full">
+            <label for="vaga">Vaga <em>*</em></label>
+            <select id="vaga" name="vaga" required>
+              <option>Estágio em Engenharia Civil ou Arquitetura</option>
+            </select>
+          </div>
+          <div class="campo full">
+            <label for="nome">Nome completo <em>*</em></label>
+            <input id="nome" name="nome" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail <em>*</em></label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="campo">
+            <label for="telefone">WhatsApp <em>*</em></label>
+            <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(49) 9 0000-0000" required>
+          </div>
+          <div class="campo">
+            <label for="curso">Curso <em>*</em></label>
+            <select id="curso" name="curso" required>
+              <option value="">Selecione</option>
+              <option>Engenharia Civil</option>
+              <option>Arquitetura e Urbanismo</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="periodo">Período atual <em>*</em></label>
+            <select id="periodo" name="periodo" required>
+              <option value="">Selecione</option>
+              <option>7º período</option>
+              <option>8º período</option>
+              <option>9º período</option>
+              <option>10º período</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="instituicao">Instituição de ensino <em>*</em></label>
+            <input id="instituicao" name="instituicao" placeholder="Ex.: Unochapecó, UFFS" required>
+          </div>
+          <div class="campo">
+            <label for="cidade">Cidade onde mora</label>
+            <input id="cidade" name="cidade" autocomplete="address-level2">
+          </div>
+          <div class="campo full">
+            <label for="link">LinkedIn ou portfólio</label>
+            <input id="link" name="link" type="url" placeholder="https://">
+          </div>
+          <div class="campo full">
+            <label for="mensagem">Conte um pouco sobre você</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Opcional"></textarea>
+          </div>
+          <div class="campo full">
+            <label>Currículo <em>*</em></label>
+            <label class="upload" id="up">
+              <input type="file" id="arquivo" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+              <span class="ico"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 18v-6M9.5 14.5L12 12l2.5 2.5"/></svg></span>
+              <span><b id="up-t">Anexar currículo</b><small id="up-s">PDF ou Word, até 5 MB</small></span>
+            </label>
+          </div>
+          <div class="isca" aria-hidden="true"><label>Site<input id="site" name="site" tabindex="-1" autocomplete="off"></label></div>
+          <label class="consent full">
+            <input type="checkbox" id="lgpd">
+            <span>Autorizo a Ávira Incorporadora a usar meus dados apenas para este processo seletivo.</span>
+          </label>
+        </div>
+
+        <button class="enviar" id="bt" type="submit"><span class="spin"></span><span id="bt-t">Enviar candidatura</span></button>
+        <p class="msg-erro" id="erro" role="alert"></p>
+      </form>
+
+      <div class="sucesso" id="ok">
+        <div class="ok-ico"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <h2>Candidatura enviada!</h2>
+        <p>Obrigado pelo interesse em fazer parte da Ávira. Vamos analisar seu currículo e, se o seu perfil combinar com a vaga, entramos em contato.</p>
+        <a href="./">Voltar para a página inicial</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="faixa-base">
+  <div class="listras" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="base-in">
+    <span class="logo-mini" aria-hidden="true"><svg style="width:100%;height:auto;display:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2034 444" version="1.1"><path d="M 153.799 19.250 C 146.355 29.838, 138.146 41.538, 135.555 45.250 L 130.845 52 150.173 51.961 L 169.500 51.923 187 26.906 C 196.625 13.147, 204.650 1.464, 204.833 0.945 C 205.035 0.373, 197.690 -0, 186.250 -0 L 167.332 -0 153.799 19.250 M 615.703 43.442 C 601.530 48.498, 593.119 62.784, 595.806 77.235 C 601.208 106.282, 640.177 111.699, 653.215 85.215 C 657.396 76.722, 657.683 68.369, 654.074 60.230 C 651.142 53.619, 642.817 45.807, 636.357 43.606 C 630.667 41.667, 620.897 41.590, 615.703 43.442 M 1292.444 44.374 C 1286.136 47.311, 1280.412 53.875, 1278.477 60.388 C 1276.618 66.649, 1276.629 68.387, 1278.567 74.913 C 1283.037 89.967, 1300.769 97.711, 1314.656 90.674 C 1323.761 86.061, 1328.941 77.659, 1328.978 67.446 C 1329.046 48.680, 1309.588 36.391, 1292.444 44.374 M 124.496 80.250 C 117.339 100.505, 0 436.431, 0 436.663 C 0 436.848, 8.930 437, 19.844 437 L 39.688 437 57.594 385.750 L 75.500 334.500 147.135 334.243 L 218.770 333.987 223.420 347.243 C 225.978 354.535, 234.061 377.600, 241.383 398.500 L 254.695 436.500 275.463 436.771 C 291.920 436.985, 296.134 436.778, 295.770 435.771 C 295.518 435.072, 267.455 354.512, 233.409 256.750 L 171.507 79 148.222 79 C 130.496 79, 124.832 79.298, 124.496 80.250 M 146.633 128 C 146.314 128.825, 132.810 167.750, 116.625 214.500 L 87.199 299.500 146.758 299.758 C 179.516 299.900, 206.512 299.821, 206.751 299.583 C 207.068 299.265, 158.866 159.011, 148.469 130 C 147.616 127.619, 147.029 126.979, 146.633 128 M 1503.585 146.107 C 1488.912 148.247, 1470.359 155.512, 1459.500 163.371 C 1452.429 168.488, 1442.477 178.582, 1438.706 184.460 L 1435.500 189.459 1435.228 170.230 L 1434.957 151 1421.978 151 L 1409 151 1409 293 L 1409 435 1422 435 L 1435 435 1435.017 345.250 C 1435.027 293.555, 1435.452 251.541, 1436.018 246.164 C 1440.045 207.938, 1459.565 182.040, 1492.035 171.844 C 1498.568 169.793, 1501.436 169.507, 1515 169.555 C 1529.048 169.604, 1531.249 169.860, 1538.500 172.279 C 1549.859 176.070, 1558.084 181.319, 1566.552 190.182 C 1578.393 202.576, 1585.648 219.478, 1588.034 240.229 C 1588.569 244.881, 1588.988 289.306, 1588.992 341.750 L 1589 435 1602.040 435 L 1615.080 435 1614.719 332.750 C 1614.397 241.718, 1614.174 229.680, 1612.687 223.029 C 1604.247 185.291, 1583.514 160.763, 1551 150.050 C 1537.648 145.651, 1517.944 144.012, 1503.585 146.107 M 1804 145.595 C 1764.196 150.329, 1733.698 165.703, 1709.529 193.218 C 1679.347 227.578, 1667.255 279.646, 1677.977 329.083 C 1690.167 385.289, 1730.887 425.929, 1787.312 438.204 C 1801.014 441.184, 1833.609 441.439, 1847.374 438.672 C 1887.544 430.599, 1918.205 408.531, 1935.168 375.481 C 1939.373 367.290, 1945 353.243, 1945 350.940 C 1945 350.397, 1938.979 350, 1930.745 350 L 1916.490 350 1914.212 355.874 C 1908.511 370.576, 1892.909 388.924, 1877.794 398.702 C 1840.046 423.121, 1787.218 421.209, 1751.340 394.125 C 1727.114 375.837, 1711.663 350.767, 1704.848 318.688 C 1701.794 304.312, 1701.798 281.669, 1704.857 267.266 C 1716.323 213.289, 1755.339 176.470, 1807.013 170.866 C 1826.446 168.758, 1847.713 172.418, 1865.706 180.967 C 1887.187 191.173, 1902.428 206.225, 1912.569 227.250 L 1917.272 237 1931.215 237 L 1945.159 237 1944.464 233.750 C 1944.081 231.963, 1942.272 226.765, 1940.443 222.201 C 1924.513 182.450, 1890.425 155.350, 1846.500 147.516 C 1837.766 145.958, 1811.084 144.752, 1804 145.595 M 984.500 149.555 C 952.552 154.953, 922.971 171.783, 902.867 196 C 882.654 220.348, 871.422 249.515, 869.101 283.684 C 865.039 343.482, 890.703 396.662, 936.880 424.132 C 958.619 437.064, 981.330 442.988, 1009.199 442.996 C 1050.332 443.007, 1084.267 426.957, 1107.106 396.688 L 1113 388.877 1113 412.938 L 1113 437 1131.500 437 L 1150 437 1150 295.500 L 1150 154 1131.500 154 L 1113 154 1113 178.562 L 1113 203.123 1107.075 195.260 C 1092.021 175.282, 1069.160 159.343, 1046 152.677 C 1029.709 147.988, 1002.078 146.585, 984.500 149.555 M 1241 163 L 1241 175 1268 175 L 1295 175 1295 305 L 1295 435 1308 435 L 1321 435 1321 293 L 1321 151 1281 151 L 1241 151 1241 163 M 282.345 154.750 C 282.724 155.365, 385.470 414.356, 392.244 431.772 L 394.295 437.045 411.820 436.772 L 429.345 436.500 485.163 297.500 C 515.863 221.050, 541.259 157.488, 541.599 156.250 L 542.217 154 522.770 154 L 503.323 154 458.044 268.250 C 433.140 331.087, 412.675 382.605, 412.566 382.732 C 412.458 382.860, 392.400 331.448, 367.993 268.482 L 323.618 154 302.750 154 C 291.273 154, 282.090 154.338, 282.345 154.750 M 561 171 L 561 188 585.500 188 L 610 188 610 312.500 L 610 437 629.500 437 L 649 437 649 295.500 L 649 154 605 154 L 561 154 561 171 M 775.654 155.632 C 751.272 160.861, 736.937 173.776, 730.288 196.500 C 728.666 202.044, 728.510 211.410, 728.238 319.750 L 727.945 437 746.944 437 L 765.942 437 766.227 324.250 C 766.494 218.490, 766.623 211.213, 768.310 206.867 C 771.010 199.910, 775.990 194.738, 783.187 191.415 L 789.500 188.500 823.250 188.190 L 857 187.879 857 170.940 L 857 154 819.750 154.082 C 791.019 154.144, 780.934 154.499, 775.654 155.632 M 991.849 184.564 C 941.980 193.589, 908.012 238.537, 908.012 295.500 C 908.012 350.041, 937.762 391.996, 985.825 405.234 C 992.235 407, 996.301 407.350, 1010.500 407.358 C 1026.128 407.366, 1028.210 407.150, 1036.296 404.675 C 1069.510 394.508, 1094.421 369.720, 1105.922 335.393 C 1113.557 312.603, 1114.116 283.464, 1107.366 260.112 C 1104.374 249.763, 1097.817 235.600, 1091.979 226.877 C 1085.638 217.403, 1069.859 202.377, 1060.207 196.620 C 1051.148 191.218, 1035.989 185.649, 1026 184.053 C 1017.172 182.643, 1001.138 182.883, 991.849 184.564 M 2002 389.935 C 1996.694 391.555, 1991.067 395.095, 1988.125 398.665 C 1979.978 408.548, 1980.196 422.028, 1988.662 431.918 C 1998.126 442.974, 2014.377 443.978, 2025.226 434.177 C 2031.393 428.606, 2033.454 423.802, 2033.454 415 C 2033.454 409.207, 2032.955 406.557, 2031.261 403.357 C 2025.833 393.099, 2012.167 386.831, 2002 389.935" stroke="none" fill="currentColor" fill-rule="evenodd"/></svg></span>
+    <p class="assina">A vida pede um Ávira.</p>
+    <p class="fino">Ávira Incorporadora · Chapecó, SC</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var API = "https://script.google.com/macros/s/AKfycbzvZydTeYAsO7Mm9JhUyqt4jHWb4uxYfDo-6X02lZiME0En1Hxjl00DylxjVeCwBRS3/exec";
+  var MAX = 5 * 1024 * 1024;
+  var TIPOS = {"pdf":"application/pdf","doc":"application/msword","docx":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"};
+  var f = document.getElementById("f"), up = document.getElementById("up"), inp = document.getElementById("arquivo");
+  var erro = document.getElementById("erro"), bt = document.getElementById("bt"), btT = document.getElementById("bt-t");
+  var arquivo = null;
+
+  function tipoDe(file){
+    if (TIPOS[(file.name.split(".").pop()||"").toLowerCase()]) return TIPOS[file.name.split(".").pop().toLowerCase()];
+    return file.type;
+  }
+  function escolher(file){
+    up.classList.remove("erro","ok"); arquivo = null;
+    if (!file) return;
+    var tipo = tipoDe(file);
+    if (["application/pdf","application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document"].indexOf(tipo) < 0){
+      up.classList.add("erro"); document.getElementById("up-t").textContent = "Formato não aceito";
+      document.getElementById("up-s").textContent = "Envie em PDF ou Word"; return;
+    }
+    if (file.size > MAX){
+      up.classList.add("erro"); document.getElementById("up-t").textContent = "Arquivo muito grande";
+      document.getElementById("up-s").textContent = "O limite é 5 MB"; return;
+    }
+    arquivo = file; up.classList.add("ok");
+    document.getElementById("up-t").textContent = file.name;
+    document.getElementById("up-s").textContent = (file.size/1024/1024).toFixed(1).replace(".",",") + " MB · toque para trocar";
+  }
+  inp.addEventListener("change", function(){ escolher(inp.files[0]); });
+  ["dragenter","dragover"].forEach(function(ev){ up.addEventListener(ev,function(e){ e.preventDefault(); up.classList.add("arrastando"); }); });
+  ["dragleave","drop"].forEach(function(ev){ up.addEventListener(ev,function(e){ e.preventDefault(); up.classList.remove("arrastando"); }); });
+  up.addEventListener("drop", function(e){ if (e.dataTransfer.files[0]) escolher(e.dataTransfer.files[0]); });
+
+  var tel = document.getElementById("telefone");
+  tel.addEventListener("input", function(){
+    var d = tel.value.replace(/\D/g,"").slice(0,11), r = d;
+    if (d.length > 2) r = "(" + d.slice(0,2) + ") " + d.slice(2);
+    if (d.length > 7) r = "(" + d.slice(0,2) + ") " + d.slice(2, d.length-4) + "-" + d.slice(-4);
+    tel.value = r;
+  });
+
+  function lerBase64(file){
+    return new Promise(function(ok, falha){
+      var r = new FileReader();
+      r.onload = function(){ ok(String(r.result).split(",")[1]); };
+      r.onerror = falha; r.readAsDataURL(file);
+    });
+  }
+  function v(id){ return (document.getElementById(id).value || "").trim(); }
+
+  f.addEventListener("submit", function(e){
+    e.preventDefault(); erro.textContent = "";
+    document.querySelectorAll(".campo.erro").forEach(function(c){ c.classList.remove("erro"); });
+    var obrig = ["nome","email","telefone","curso","periodo","instituicao"], falta = null;
+    obrig.forEach(function(id){ if (!v(id)) { document.getElementById(id).closest(".campo").classList.add("erro"); falta = falta || id; } });
+    if (falta){ erro.textContent = "Preencha os campos obrigatórios."; document.getElementById(falta).focus(); return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v("email"))){ document.getElementById("email").closest(".campo").classList.add("erro"); erro.textContent = "Confira o e-mail."; return; }
+    if (!arquivo){ up.classList.add("erro"); erro.textContent = "Anexe o seu currículo."; return; }
+    if (!document.getElementById("lgpd").checked){ erro.textContent = "Marque a autorização para enviar."; return; }
+
+    bt.disabled = true; bt.classList.add("enviando"); btT.textContent = "Enviando...";
+    lerBase64(arquivo).then(function(b64){
+      return fetch(API, { method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify({
+        vaga:v("vaga"), nome:v("nome"), email:v("email"), telefone:v("telefone"), curso:v("curso"), periodo:v("periodo"),
+        instituicao:v("instituicao"), cidade:v("cidade"), link:v("link"), mensagem:v("mensagem"), site:v("site"),
+        arquivo:{ nome: arquivo.name, tipo: tipoDe(arquivo), dados: b64 }
+      })});
+    }).then(function(r){ return r.json(); }).then(function(d){
+      if (!d || !d.ok) throw new Error((d && d.error) || "erro");
+      f.style.display = "none"; document.getElementById("ok").style.display = "block";
+      document.getElementById("candidatura").scrollIntoView({behavior:"smooth", block:"start"});
+    }).catch(function(err){
+      erro.textContent = (err && err.message && err.message !== "erro" && err.message.indexOf("fetch") < 0) ? err.message : "Não foi possível enviar agora. Tente novamente em instantes.";
+    }).finally(function(){
+      bt.disabled = false; bt.classList.remove("enviando"); btT.textContent = "Enviar candidatura";
+    });
+  });
+})();
+</script>
+</body>
+</html>
