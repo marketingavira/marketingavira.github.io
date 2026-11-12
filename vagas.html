@@ -251,6 +251,8 @@
   .bloco ul{list-style:none;display:flex;flex-direction:column;gap:7px}
   .bloco li{position:relative;padding-left:16px;font-size:14.5px;color:var(--marrom);line-height:1.45}
   .bloco li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--conhaque)}
+  .bloco li.valor{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+  .bloco li.valor b{font-weight:500;color:var(--marrom);white-space:nowrap}
   .bloco p{font-size:14.5px;color:var(--marrom);line-height:1.5}
 
   .btn-cand{
@@ -378,9 +380,9 @@
         <div class="bloco">
           <h3><i></i>Bolsa-auxílio e benefícios</h3>
           <ul>
-            <li>Bolsa-auxílio</li>
-            <li>Vale-transporte</li>
-            <li>Vale-alimentação</li>
+            <li class="valor"><span>Bolsa-auxílio</span><b>R$ 1.800</b></li>
+            <li class="valor"><span>Vale-transporte</span><b>R$ 50</b></li>
+            <li class="valor"><span>Vale-alimentação</span><b>R$ 300</b></li>
           </ul>
         </div>
         <div class="bloco">
